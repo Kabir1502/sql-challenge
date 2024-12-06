@@ -17,18 +17,18 @@ CREATE TABLE dept_manager (
     FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
 );
 
-DROP TABLE dept_manager;
 
 CREATE TABLE employees (
     emp_no INT NOT NULL PRIMARY KEY,
 	emp_title_id VARCHAR(10) NOT NULL,
     birth_date DATE NOT NULL,         
-    first_name VARCHAR(14) NOT NULL,  
-    last_name VARCHAR(16) NOT NULL,   
+    first_name VARCHAR(20) NOT NULL,  
+    last_name VARCHAR(20) NOT NULL,   
     sex CHAR(1) NOT NULL,             
     hire_date DATE NOT NULL,
 	FOREIGN KEY (emp_title_id) REFERENCES titles(title_id)
 );
+
 
 CREATE TABLE salaries (
     emp_no INT NOT NULL,              
